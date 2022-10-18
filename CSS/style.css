@@ -19,7 +19,7 @@ h1{
 
 table{
     width: 90%;
-    padding: 10px;
+    padding: 30px;
     border-radius: 10px;
     border-color: black;
     border-style: double;
@@ -28,13 +28,13 @@ table{
 }
 
 td{
+    padding: 50px;
     width: 50%;
     vertical-align: middle;
     font-family: 'Gill Sans MT';
 }
 
 p{
-    padding-left: 50px;
     font-size: x-large;
     font-family: 'Gill Sans MT';
 }
@@ -67,7 +67,7 @@ a:hover{
 }
 
 .linguagem-logo{
-    width: 15%;
+    width: 20%;
 }
 
 .logo{
@@ -79,17 +79,14 @@ a:hover{
     padding: 5%;
 }
 
-@media screen and (max-width:820px){
+@media screen and (max-width:1000px){
     td{
         width: 100%;
         display: block;
+        padding: 0px;
     }
 
     h1{
         font-size: 30pt;
-    }
-
-    p{
-        padding-left: 0px;
     }
 }
