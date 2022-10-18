@@ -1,0 +1,93 @@
+body{
+    background-image: url("../Imagens/background.jpg");
+}
+
+.estilo{
+    text-align: center;
+    color: antiquewhite;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: antiquewhite;
+}
+
+h1{
+    font-family: 'Rockwell';
+    font-size: 44pt;
+    padding-bottom: 30px;
+}
+
+table{
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: double;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    width: 50%;
+    vertical-align: middle;
+    font-family: 'Gill Sans MT';
+}
+
+p{
+    padding-left: 50px;
+    font-size: x-large;
+    font-family: 'Gill Sans MT';
+}
+
+#imagem{
+    width: 350px;
+    border-radius: 50%;
+}
+
+ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+li{
+    padding-bottom: 15px;
+    font-size: x-large;
+}
+
+a:link{
+    color: antiquewhite;
+}
+
+a:visited{
+    color: bisque;
+}
+
+a:hover{
+    color: aliceblue;
+}
+
+.linguagem-logo{
+    width: 15%;
+}
+
+.logo{
+    width: 10%;
+}
+
+.inline{
+    display: inline;
+    padding: 5%;
+}
+
+@media screen and (max-width:820px){
+    td{
+        width: 100%;
+        display: block;
+    }
+
+    h1{
+        font-size: 30pt;
+    }
+
+    p{
+        padding-left: 0px;
+    }
+}
