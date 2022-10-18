@@ -1,7 +1,7 @@
 body{
     background-image: url("../Imagens/background.jpg");
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .estilo{
@@ -83,7 +83,8 @@ a:hover{
     td{
         width: 100%;
         display: block;
-        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     h1{
