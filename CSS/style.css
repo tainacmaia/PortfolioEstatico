@@ -9,6 +9,7 @@ body{
     color: antiquewhite;
     -webkit-text-stroke-width: 0.4px;
     -webkit-text-stroke-color: antiquewhite;
+
 }
 
 h1{
@@ -21,6 +22,7 @@ table{
     width: 90%;
     padding: 30px;
     border-radius: 10px;
+    border-width: 15px;
     border-color: black;
     border-style: double;
     margin-left: auto;
@@ -79,7 +81,7 @@ a:hover{
     padding: 5%;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1000px){    
     td{
         width: 100%;
         display: block;
@@ -89,5 +91,9 @@ a:hover{
 
     h1{
         font-size: 30pt;
+    }
+
+    #imagem{
+        width: 300px;
     }
 }
