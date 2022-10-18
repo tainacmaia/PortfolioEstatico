@@ -1,5 +1,9 @@
 body{
     background-image: url("../Imagens/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -15,7 +19,7 @@ body{
 h1{
     font-family: 'Rockwell';
     font-size: 44pt;
-    padding-bottom: 30px;
+    padding: 30px;
 }
 
 table{
@@ -49,6 +53,7 @@ p{
 ul{
     list-style-type: none;
     text-align: center;
+    padding: 0px;
 }
 
 li{
@@ -74,6 +79,7 @@ a:hover{
 
 .logo{
     width: 10%;
+    padding-bottom: 50px;
 }
 
 .inline{
@@ -94,6 +100,6 @@ a:hover{
     }
 
     #imagem{
-        width: 300px;
+        width: 250px;
     }
 }
