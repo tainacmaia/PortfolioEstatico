@@ -13,45 +13,42 @@
         <h1> My cousin is out fighting dragons, and what do I get? Programming duty. <img id="dragon" src="./Imagens/dragon2.gif" alt="Dragon"></h1>
     </header>
     <main class="estilo">
-        <section>
-            <table id="borda">
-                <td>
+        <section id="borda">
+                <div id="inline">
                     <p>Olá viajante! Meu nome é Taina, sou estudante de Desenvolvimento Web Full Stack na Let's Code from Ada e trabalho como Analista de Desenvolvimento de Sistemas no Banco Safra.</p> 
                     <p>No momento a Dark Brotherhood me chamou para uma missão, então esse portfólio ainda não foi concluído. Enquanto aguarda, por que você não come um sweet roll?</p>
-                    <table class="menu">
-                        <td>
+                    <div class="menu" id="inline-secondary-box">
+                        <div>
                             <img id="black-dragon" src="./Imagens/dragon3.gif" alt="Dragon"> 
-                        </td>
-                        <td>
+                        </div>
+                        <div id="inline-secondary-box secondary-list">
                         <p><a href="#linguagens">Conhecimentos</a></p>
                         <p><a href="#redes">Como me contatar</a></p>   
-                        </td>  
-                    </table>
-                </td>
-                <td>
+                        </div>  
+                    </div>
+                </div>
+                <div id="block">
                     <p><img id="imagem" src="./Imagens/arco.jpg" alt="Taina Maia"></p>
                     <p><i>I used to be an adventurer like you, then I took a C# in the knee</i></p>
-                </td>
-            </table>
+                </div>
         </section>
-        <section>
-            <h1 id="linguagens">Magias que aprendi até agora:</h1>
-            <ul>
-                <li class="inline"><img  class="linguagem-logo" src="./Imagens/clanguage.png" alt="C Language Logo"></li>
-                <li class="inline"><img  class="linguagem-logo" src="./Imagens/csharplogo.png" alt="CSharp Logo"></li>
-                <li class="inline"><img  class="linguagem-logo" src="./Imagens/sqllogo.png" alt="SQL Logo"></li>
-                <li class="inline"><img  class="linguagem-logo" src="./Imagens/html.png" alt="HTML Logo"></li>
-                <li class="inline"><img  class="linguagem-logo" src="./Imagens/csslogo.png" alt="CSS Logo"></li>            
-
+        <section id="list-box">
+            <h1>Magias que aprendi até agora:</h1>
+            <ul class="inline logo">
+                <li  id="clogo"></li>
+                <li  id="csharplogo"></li>
+                <li id="sqllogo"></li>
+                <li id="htmllogo"></li>
+                <li  id="csslogo"></li>          
             </ul>
         </section>
-        <section>
+        <section  id="list-box">
             <h1 id="redes">Para me encontrar ou enviar seu mensageiro:</h1>
-            <ul>
-                <li class="inline"><a href="https://www.instagram.com/tainacmaia/" target="_blank"><img class= "logo" src="./Imagens/instalogo.png" alt="Instagram Logo"></a></li>
-                <li class="inline"><a href="https://github.com/tainacmaia" target="_blank"><img class= "logo" src="./Imagens/githublogo.png" alt="GitHub Logo"></a></li>
-                <li class="inline"><a href="https://www.linkedin.com/in/taina-maia-9aaa1a10a/" target="_blank"><img class= "logo" src="./Imagens/linkedinlogo.png" alt="LinkedIn Logo"></a></li>
-                <li class="inline"><a href="mailto:taina.cmaia@hotmail.com"><img class= "logo" src="./Imagens/emaillogo.png" alt="Email Logo"></a></li>
+            <ul class="inline logo">
+                <li id="instagram"><a href="https://www.instagram.com/tainacmaia/" target="_blank"></a></li>
+                <li id="github"><a href="https://github.com/tainacmaia" target="_blank"></a></li>
+                <li id="linkedin"><a href="https://www.linkedin.com/in/taina-maia-9aaa1a10a/" target="_blank"></a></li>
+                <li id="email"><a href="mailto:taina.cmaia@hotmail.com"></a></li>
             </ul>
         </section>        
     </main>

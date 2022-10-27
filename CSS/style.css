@@ -9,11 +9,13 @@ body{
 }
 
 .estilo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     color: antiquewhite;
     -webkit-text-stroke-width: 0.4px;
     -webkit-text-stroke-color: antiquewhite;
-
 }
 
 h1{
@@ -27,8 +29,10 @@ h1{
 }
 
 #borda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 90%;
-    padding: 30px;
     border-radius: 10px;
     border-width: 15px;
     border-color: black;
@@ -37,11 +41,30 @@ h1{
     margin-right: auto;
 }
 
-td{
-    padding: 40px;
+#inline{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     width: 50%;
     vertical-align: middle;
     font-family: 'Gill Sans MT';
+    border: 1px solid red;
+}
+
+#block{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+#inline-secondary-box{
+    display: flex;
+    border: 1px solid red;
+}
+
+#secondary-list{
+    display: flex;
+    flex-direction: column;
 }
 
 p{
@@ -86,33 +109,134 @@ a:hover{
     color: aliceblue;
 }
 
-.linguagem-logo{
-    width: 20%;
+#list-box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    border: 1px solid red;
 }
 
-.logo{
-    width: 10%;
-    padding-bottom: 70px;
+#list-box h1{
+    display: flex;
+    position: relative;
+}
+
+.logo li{
+    display: flex;
+    border: 1px solid red;
+    width: 60px;
+    height: 60px;
+    padding: 90px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#clogo{
+    background-image: url('../Imagens/clanguage.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#csharplogo{
+    background-image: url('../Imagens/csharplogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#sqllogo{
+    background-image: url('../Imagens/sqllogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#htmllogo{
+    background-image: url('../Imagens/html.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#csslogo{
+    background-image: url('../Imagens/csslogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .inline{
-    display: inline;
+    display: flex;
+    flex-direction: row;
     padding: 5%;
+    border: 1px solid red;
 }
 
-@media screen and (max-width:1000px){    
-    td{
+#instagram{
+    background-image: url('../Imagens/instalogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#github{
+    background-image: url('../Imagens/githublogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#linkedin{
+    background-image: url('../Imagens/linkedinlogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#email{
+    background-image: url('../Imagens/emaillogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:1024px){
+    html,body{
         width: 100%;
-        display: block;
-        padding-left: 0px;
-        padding-right: 0px;
+    }    
+    #borda{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #inline{
+        width: 100%;
     }
 
     h1{
         font-size: 30pt;
     }
 
+    p{
+        font-size: 20pt;
+    }
+
+    #inline-secondary-box{
+        flex-wrap: wrap;  
+        justify-content: center;
+    }
+
+    .inline{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     #imagem{
         width: 250px;
+    }
+
+    .logo li{
+        width: 50px;
+        height: 50px;
+        padding: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .estilo{
+
     }
 }
