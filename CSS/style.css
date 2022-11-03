@@ -29,9 +29,8 @@ h1{
 }
 
 #borda{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 90%;
     border-radius: 10px;
     border-width: 15px;
@@ -42,17 +41,16 @@ h1{
 }
 
 #inline{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-column: 1;
     padding: 20px;
-    width: 50%;
     vertical-align: middle;
     font-family: 'Gill Sans MT';
 }
 
 #block{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-column: 2;
 }
 
 #inline-secondary-box{
@@ -189,15 +187,19 @@ a:hover{
 
 @media screen and (max-width:1024px){
     html,body{
-        width: 100%;
+        width: fit-content;
     }    
     #borda{
-        flex-direction: column;
+        grid-template-columns: 90%;
         align-items: center;
     }
 
     #inline{
         width: 100%;
+    }
+
+    #block{
+        grid-column: 1;
     }
 
     h1{
