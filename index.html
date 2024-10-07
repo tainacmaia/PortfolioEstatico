@@ -7,52 +7,106 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="shortcut icon" href="./Imagens/favicon.ico">
     <title>Taina's Profile</title>
+    <script>
+        //Função para alternar entre seções da página
+        function ativar(aba){
+            const abaAtiva = document.getElementById(aba);
+            const sections = Array.prototype.slice.call(document.getElementsByTagName('section'));
+            sections.forEach(section => {
+                console.log(section);
+                if(section.id == aba){
+                    section.style.display = 'flex';
+                } else {
+                    section.style.display = 'none';
+                }
+                
+            });
+        }
+    </script>
 </head>
-<body>
-    <header class="estilo">
-        <h1> My cousin is out fighting dragons, and what do I get? Programming duty. <img id="dragon" src="./Imagens/dragon2.gif" alt="Dragon"></h1>
+<body onload="ativar('sobre-mim')">
+    <!-- Menu se seleção da seção -->
+    <header>
+        <ul>
+            <li onclick="ativar('sobre-mim')">SOBRE MIM</li>
+            <li onclick="ativar('formacao')">FORMAÇÃO</li>
+            <li onclick="ativar('portfolio')">PORTFÓLIO</li>
+            <li onclick="ativar('contato')">CONTATO</li>
+        </ul>
     </header>
-    <main class="estilo">
-        <section id="borda">
-                <div id="inline">
-                    <p>Olá viajante! Meu nome é Taina, sou estudante de Desenvolvimento Web Full Stack na Let's Code from Ada e trabalho como Analista de Desenvolvimento de Sistemas no Banco Safra.</p> 
-                    <p>No momento a Dark Brotherhood me chamou para uma missão, então esse portfólio ainda não foi concluído. Enquanto aguarda, por que você não come um sweet roll?</p>
-                    <div class="menu" id="inline-secondary-box">
-                        <div>
-                            <img id="black-dragon" src="./Imagens/dragon3.gif" alt="Dragon"> 
-                        </div>
-                        <div id="inline-secondary-box secondary-list">
-                        <p><a href="#linguagens">Conhecimentos</a></p>
-                        <p><a href="#redes">Como me contatar</a></p>   
-                        </div>  
-                    </div>
+    <main>
+        <section id="sobre-mim">
+            <!-- seção sobre mim -->
+            <div class="titulo">
+                <h1> My cousin is out fighting dragons, and what do I get? Programming duty.</h1>
+                <img id="dragon" src="./Imagens/dragon2.gif" alt="Dragon">
+            </div>
+            <div class="detalhes">
+                <div>
+                    <p>Olá viajante! Meu nome é Taina, sou estudante de Engenharia de Software e Analista de Desenvolvimento de Sistemas. 
+                        Nas horas vagas gosto de jogar e faço alguns trabalhos para a Dark Brotherhood em Skyrim.</p> 
+                    <p>No momento fui chamada para uma missão em um reino distante, mas você pode 
+                        me encontrar <u onclick="ativar('contato')">aqui</u> ou mandar seu mensageiro!
+                    </p>
+                    <img id="black-dragon" src="./Imagens/dragon3.gif" alt="Dragon"> 
                 </div>
-                <div id="block">
-                    <p><img id="imagem" src="./Imagens/arco.jpg" alt="Taina Maia"></p>
-                    <p><i>I used to be an adventurer like you, then I took a C# in the knee</i></p>
-                </div>
+                <div>
+                    <p><img id="taina-profile" src="./Imagens/arco.jpg" alt="Taina Maia"></p>
+                    <p><i>"I used to be an adventurer like you, then I took a Javascript in the knee"</i></p>
+                </div>                
+            </div>
         </section>
-        <section id="list-box">
+        <section id="formacao">
+            <!-- seção formação -->
+            <p>Sou formada em Oceanografia pela Universidade Federal do Maranhão (UFMA), 
+                mas em 2022 fiz transição de carreira e hoje atuo como Analista de Desenvolvimento de Sistemas, 
+                tendo realizado um curso de longa duração em Web Full Stack pela Ada Tech. 
+                Hoje faço minha segunda graduação na UNINTER, onde curso Engenharia de Software</p>
             <h1>Magias que aprendi até agora:</h1>
-            <ul class="inline logo">
-                <li  id="clogo"></li>
-                <li  id="csharplogo"></li>
-                <li id="sqllogo"></li>
-                <li id="htmllogo"></li>
-                <li  id="csslogo"></li>          
+            <ul>
+                <li><img src="./imagens/clanguage.png" alt="Logo Linguagem C"></li>
+                <li><img src="./imagens/csharplogo.png" alt="Logo C Sharp"></li>
+                <li><img src="./imagens/html.png" alt="Logo HTML"></li>
+                <li><img src="./imagens/csslogo.png" alt="Logo CSS"></li>
+                <li><img src="./imagens/jslogo.png" alt="Logo Javascript"></li>
+                <li><img src="./imagens/pythonlogo.png" alt="Logo Python"></li>
             </ul>
+            <p>Idiomas falados: Portguês (nativo), Inglês (avançado), Italiano (avançado) e Espanhol (básico).</p>
         </section>
-        <section  id="list-box">
+        <section id="portfolio">
+            <!-- seção portfólio -->
+            <p>Para conhecer mais sobre o meu trabalho, você pode acessar meu Github clicando <a href="https://github.com/tainacmaia">aqui</a>.</p>
+            <p>Indico dar uma olhada especial nos seguintes projetos:</p>
+            <ul>
+                <li><a href="https://github.com/tainacmaia/ProjetoFinalFrontEstatico_Taina_Lucas">Heróis e Vilões</a></li>
+                <li><a href="https://github.com/tainacmaia/JogoDaVelha">Jogo da Velha</a></li>
+                <li><a href="https://github.com/MateusASF/Projeto_FullStack_Site-de-Eventos">Site de Eventos</a></li>
+                <li><a href="https://github.com/tainacmaia/ProjetoCV">CV Template</a></li>
+                <li><a href="https://github.com/tainacmaia/854ProvaTaina">Batalha Naval</a></li>
+            </ul>
+        </section>        
+        <section id="contato">
+            <!-- seção contato -->
             <h1 id="redes">Para me encontrar ou enviar seu mensageiro:</h1>
+            <form action="" method="post">
+                <label for="nome"></label>
+                <input type="text" name="nome" placeholder="Nome">
+                <label for="Telefone"></label>
+                <input type="text" name="telefone" placeholder="Telefone">
+                <label for="mensagem"></label>
+                <input type="text" height="100px" id="mensagem" name="mensagem" placeholder="Digite sua mensagem">
+                <input type="submit" name="submit" id="submit" value="Enviar">
+            </form>
+            <p>Você também pode dar uma olhada nas minhas redes:</p>
             <ul class="inline logo">
-                <li id="instagram"><a href="https://www.instagram.com/tainacmaia/" target="_blank"></a></li>
-                <li id="github"><a href="https://github.com/tainacmaia" target="_blank"></a></li>
-                <li id="linkedin"><a href="https://www.linkedin.com/in/taina-maia-9aaa1a10a/" target="_blank"></a></li>
-                <li id="email"><a href="mailto:taina.cmaia@hotmail.com"></a></li>
+                <li><a href="https://www.instagram.com/tainacmaia/" target="_blank"><img src="./imagens/instalogo.png" alt="Logo instagram"></a></li>
+                <li><a href="https://github.com/tainacmaia" target="_blank"><img src="./imagens/githublogo.png" alt="Logo Github"></a></li>
+                <li><a href="https://www.linkedin.com/in/taina-maia-9aaa1a10a/" target="_blank"><img src="./imagens/emaillogo.png" alt="Logo E-mail"></a></li>
+                <!-- <li><a href="mailto:taina.cmaia@hotmail.com"></a></li> -->
             </ul>
         </section>        
     </main>
-    <footer class="estilo">
+    <footer>
         <img id="dragon" src="./Imagens/dragon.gif" alt="Dragon">
         <p>Nenhum dragão foi ferido na produção desta página.</p>
     </footer>

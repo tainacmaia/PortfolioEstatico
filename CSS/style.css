@@ -8,231 +8,206 @@ body{
     margin-right: auto;
 }
 
-.estilo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+*{
     color: antiquewhite;
     -webkit-text-stroke-width: 0.4px;
-    -webkit-text-stroke-color: antiquewhite;
+    -webkit-text-stroke-color: antiquewhite;    
+    list-style-type: none;
 }
 
-h1{
-    font-family: 'Rockwell';
-    font-size: 44pt;
-    padding: 20px;
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    ul{
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(250, 235, 215, .2);
+        padding: 1rem 0.5rem;
+
+        li:hover{
+            cursor: pointer;
+        }
+    }
 }
 
-#dragon{
-    width: 170px;
-}
-
-#borda{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 90%;
-    border-radius: 10px;
-    border-width: 15px;
+main{
     border-color: black;
     border-style: double;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
+    border-width: 15px;
+    margin: 0.5rem 3rem 0;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+
+    p, a{
+        font-size: 20pt;
+        font-family: 'Gill Sans MT';
+    }
+    
+    #sobre-mim{
+        display: flex;
+        flex-direction: column;
+        .titulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            h1{
+                position: relative;
+                font-family: 'Rockwell';
+                font-size: 26pt;
+                text-align: center;
+                width: fit-content;
+            }
+        
+            #dragon{
+                width: 90px;
+                height: fit-content;
+            }        
+        }
+
+        .detalhes{
+            display: flex;
+            gap: 4rem;
+            justify-content: center;
+            text-align: justify;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                font-family: 'Gill Sans MT';
+                justify-content: center;
+                align-items: center;
+                :last-child{
+                    text-align: center;
+                }
+
+                #black-dragon{
+                    width: 270px;
+                }
+
+                #taina-profile{
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 300px;
+                    border-radius: 50%;
+                }
+
+                u{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    #formacao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        ul{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding-left: 0;
+            margin-left: 0;
+            padding-left: 0;
+            flex-wrap: wrap;
+            li{
+                img{
+                    width: 60px;
+                }
+            }
+        }
+    }
+
+    #portfolio{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        ul{
+            padding-left: 0;
+        }
+    }
+
+    #contato{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul{
+            display: flex;
+            text-align: center;
+            gap: 1rem;
+            margin-left: 0;
+            padding-left: 0;
+            li{
+                img{
+                    width: 60px;
+                }
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 400px;
+            input#mensagem{
+                height: 100px;
+            }
+            input#submit{
+                color: rgb(83, 63, 10);
+                font-weight: 700;
+                -webkit-text-stroke-width: initial;
+                -webkit-text-stroke-color: none; 
+            }
+        }
+    }
 }
 
-#inline{
-    display: grid;
-    grid-column: 1;
-    padding: 20px;
-    vertical-align: middle;
-    font-family: 'Gill Sans MT';
-}
-
-#block{
-    display: grid;
-    grid-column: 2;
-}
-
-#inline-secondary-box{
-    display: flex;
-}
-
-#secondary-list{
+footer{
     display: flex;
     flex-direction: column;
-}
-
-p{
-    font-size: 25pt;
-    font-family: 'Gill Sans MT';
-}
-
-#black-dragon{
-    width: 270px;
-}
-
-.menu{
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#imagem{
-    width: 350px;
-    border-radius: 50%;
-}
-
-ul{
-    list-style-type: none;
-    text-align: center;
-    padding: 0px;
-}
-
-li{
-    padding-bottom: 15px;
-    font-size: x-large;
-}
-
-a:link{
-    color: antiquewhite;
-}
-
-a:visited{
-    color: bisque;
-}
-
-a:hover{
-    color: aliceblue;
-}
-
-#list-box{
-    display: flex;
-    flex-direction: column;
-    position: relative;
     align-items: center;
-}
-
-#list-box h1{
-    display: flex;
-    position: relative;
-}
-
-.logo li{
-    display: flex;
-    width: 60px;
-    height: 60px;
-    padding: 90px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#clogo{
-    background-image: url('../Imagens/clanguage.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#csharplogo{
-    background-image: url('../Imagens/csharplogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#sqllogo{
-    background-image: url('../Imagens/sqllogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#htmllogo{
-    background-image: url('../Imagens/html.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#csslogo{
-    background-image: url('../Imagens/csslogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.inline{
-    display: flex;
-    flex-direction: row;
-    padding: 5%;
-}
-
-#instagram{
-    background-image: url('../Imagens/instalogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#github{
-    background-image: url('../Imagens/githublogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#linkedin{
-    background-image: url('../Imagens/linkedinlogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#email{
-    background-image: url('../Imagens/emaillogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    text-align: center;
 }
 
 @media screen and (max-width:1024px){
     html,body{
         width: fit-content;
     }    
-    #borda{
-        grid-template-columns: 90%;
-        align-items: center;
+
+    header>ul{
+        gap: 1rem;
     }
 
-    #inline{
-        width: 100%;
+    .titulo{
+        flex-direction: column;
     }
-
-    #block{
-        grid-column: 1;
-    }
-
+    
     h1{
-        font-size: 30pt;
-    }
-
-    p{
         font-size: 20pt;
     }
 
-    #inline-secondary-box{
-        flex-wrap: wrap;  
-        justify-content: center;
+    p, a, li{
+        font-size: 14pt;
     }
 
-    .inline{
-        flex-wrap: wrap;
-        justify-content: center;
+    .detalhes{
+        flex-direction: column;
     }
-
-    #imagem{
-        width: 250px;
+    #taina-profile{
+        width: 200px !important;
     }
-
-    .logo li{
-        width: 50px;
-        height: 50px;
-        padding: 30px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .estilo{
-
+    form{
+        width: 200px !important;
     }
 }
